@@ -1,5 +1,9 @@
-@import './abstract/base'; // importa SCSS de outro arquivo
+// importa SCSS de outro arquivo
+
+@import './abstract/base';
 @import './components/navbar';
 @import './components/banner';
 @import './components/servicos';
 @import './components/cupom';
+@import './components/_footer.sass';
+@import './components/_bem-estar';

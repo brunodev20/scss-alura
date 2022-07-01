@@ -1,5 +1,9 @@
-// Estilização do banner principal da página
+// Este é o arquivo SCSS que estiliza a área do banner principal da página
+
+// Importação de Variáveis
 @import '../abstract/variaveis';
+
+// Estilização SCSS
 .banner {
   background: url(../imagens/banner.jpeg) 27% center no-repeat; // Primeiro ../ precisa ser removido para mostrar a imagem, senão ela não será renderizada
   min-height: 350px;
