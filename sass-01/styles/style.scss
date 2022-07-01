@@ -1,0 +1,33 @@
+$cor-principal: #FED1EF; // No SCSS podemos criar variáveis apenas utiizando um $ + o nome
+$cor-secundaria: #1C6DD0; // variáveis podem ser utilizadas em casos de repetição de estilo
+
+@mixin reset { // aqui criamos uma função, utilizando @mixing + nome e passando o que ela deve fazer
+  margin: 0;
+  padding: 0;
+}
+
+@mixin cor-e-texto($cor-de-fundo, $cor-do-texto) { // a função utiliza 2 parâmetros, estabelecidos a seguir
+  width: 50%;
+  background-color: $cor-de-fundo;
+  .texto {
+    margin-top: 40%;
+    text-align: center;
+    font-size: 150px;
+    color: $cor-do-texto;
+  }
+}
+
+body {
+  @include reset()
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  .esquerdo {
+    @include cor-e-texto($cor-principal, $cor-secundaria); // aqui utilizamos os parâmetros que, no caso, são as variáveis criadas anteriormente
+  }
+  .direito {
+    @include cor-e-texto($cor-secundaria, $cor-principal);
+   }
+}
